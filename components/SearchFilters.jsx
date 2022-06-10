@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import {filterData, getFilterValues} from '../utils/filterData'
 
 
-export default function searchFilters() {
+export default function SearchFilters() {
     const [filters] = useState(filterData)
     const router = useRouter()
 
