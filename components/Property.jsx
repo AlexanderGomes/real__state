@@ -8,6 +8,7 @@ import { GoVerified } from "react-icons/go";
 import millify from "millify";
 import defaultImage from "../assets/images/house2.jpg";
 
+
 const Property = ({
   property: {
     coverPhoto,
@@ -74,5 +75,4 @@ const Property = ({
     </Flex>
   </Link>
 );
-
 export default Property;

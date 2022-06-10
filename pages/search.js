@@ -10,10 +10,10 @@ import SearchFilters from '../components/SearchFilters';
 
 
 const Search = ({properties}) => {
+
 const [searchFilters, setSearchFilters] = useState(false)
 const router = useRouter()
-
-return (
+  return (
     <Box>
         <Flex
         onClick={() => setSearchFilters(!searchFilters)}
@@ -55,7 +55,7 @@ return (
 export async function getServerSideProps({ query }) {
     const purpose = query.purpose || 'for-rent';
     const rentFrequency = query.rentFrequency || 'yearly';
-    const minPrice = query.minPrice || '0';
+    const minPrice = query.minPrice || '10000';
     const maxPrice = query.maxPrice || '1000000';
     const roomsMin = query.roomsMin || '0';
     const bathsMin = query.bathsMin || '0';
@@ -65,11 +65,10 @@ export async function getServerSideProps({ query }) {
     const categoryExternalID = query.categoryExternalID || '4';
   
     const data = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`);
-  
     return {
-      props: {
-        properties: data?.hits,
-      },
+        props: {
+            properties: data?.hits,
+        },
     };
   }
   

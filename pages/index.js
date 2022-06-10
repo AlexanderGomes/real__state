@@ -21,7 +21,9 @@ export const Banner = ({purpose, title1, title2, desc1, desc2, buttonText, linkN
 
 
 
-const Home = ({forRent, forSale}) => {
+export default function Home  ({forRent, forSale})  {
+
+
   return (
     <Box>
     <Banner
@@ -69,4 +71,3 @@ export async function getStaticProps() {
 
 
 
-export default Home;
