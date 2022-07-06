@@ -6,7 +6,7 @@ import { FiKey } from 'react-icons/fi';
 
 const Navbar = () => (
 <Flex p='2' borderBottom='1px' borderColor='gray.100'>
-<Box fontSize='3xl' color='gray.400' fontWeight='bold'>
+<Box color='gray.400' fontSize='3xl'  fontWeight='bold'>
 <Link href='/' paddingLeft='2'>A2G State</Link>
 </Box>
 <Spacer />
